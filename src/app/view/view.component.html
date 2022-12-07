@@ -1,0 +1,23 @@
+<app-navbar></app-navbar>
+
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">NAME</th>
+        <th scope="col">AGE</th>
+        <th scope="col">MOBILE NO</th>
+        <th scope="col">ADDRESS</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let i of data">
+        <td>{{i.name}}</td>
+        <td>{{i.age}}</td>
+        <td>{{i.mobno}}</td>
+        <td>{{i.address}}</td>
+
+      </tr>
+    
+    </tbody>
+  </table>
