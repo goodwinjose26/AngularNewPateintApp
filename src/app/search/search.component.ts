@@ -41,13 +41,13 @@ deleteBtnClick=(id:any)=>
   let data:any={
     "id":id
   }
-    this.api.deleteEmployee(data).subscribe(
+    this.api.deletePateint(data).subscribe(
       (generated:any)=>
       {
         console.log(generated)
         if(generated.status == "success")
         {
-          alert("Employee Deleted")
+          alert("Pateint Deleted")
           this.router.navigate(["/view"])
         }
         else{
