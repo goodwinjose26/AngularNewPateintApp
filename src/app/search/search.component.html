@@ -1,0 +1,38 @@
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-4">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">NAME</label>
+                    <input name="name" [(ngModel)]="name"  type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValue()" class="btn btn-success">SUBMIT</button>
+                </div>
+            </div>
+            <div class="row g-3"  *ngFor="let j of sdata">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">NAME</label>
+                    <input type="text" class="form-control" value="{{j.name}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">AGE</label>
+                    <input type="text" class="form-control" value="{{j.age}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">MOBILE NO</label>
+                    <input type="text" class="form-control" value="{{j.mobno}}">
+                </div>
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                    <label for="" class="form-label">ADDRESS</label>
+                    <input type="text" class="form-control" value="{{j.address}}">
+                </div>
+                
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="deleteBtnClick(j.id)" class="btn btn-danger">DELETE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
